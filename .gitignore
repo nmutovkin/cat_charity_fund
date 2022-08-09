@@ -42,6 +42,7 @@ pip-delete-this-directory.txt
 
 # db
 fastapi.db
+test.db
 
 # Unit test / coverage reports
 htmlcov/
