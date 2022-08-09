@@ -62,10 +62,10 @@ class CRUDBase(
         self,
         session: AsyncSession
     ) -> List[ModelType]:
-        db_projects = await session.execute(
+        db_objs = await session.execute(
             select(self.model)
         )
-        return db_projects.scalars().all()
+        return db_objs.scalars().all()
 
     async def get_available_objs(
         self,

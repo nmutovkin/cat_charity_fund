@@ -6,10 +6,10 @@ Create Date: 2022-08-06 16:49:53.100226
 
 """
 from email.policy import default
+
 import sqlalchemy as sa
 
 from alembic import op
-from datetime import datetime
 
 # revision identifiers, used by Alembic.
 revision = '02'
@@ -23,9 +23,9 @@ def upgrade():
     op.create_table('donation',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('full_amount', sa.Integer(), nullable=False),
-    sa.Column('invested_amount', sa.Integer(), nullable=False, default=0),
-    sa.Column('fully_invested', sa.Boolean(), nullable=False, default=False),
-    sa.Column('create_date', sa.DateTime(), nullable=False, default=datetime.now),
+    sa.Column('invested_amount', sa.Integer(), nullable=False),
+    sa.Column('fully_invested', sa.Boolean(), nullable=False),
+    sa.Column('create_date', sa.DateTime(), nullable=False),
     sa.Column('close_date', sa.DateTime(), nullable=True),
     sa.Column('comment', sa.Text(), nullable=True),
     sa.PrimaryKeyConstraint('id')

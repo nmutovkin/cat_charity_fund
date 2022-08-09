@@ -24,6 +24,7 @@ async def invest(
         return invested_amount, fully_invested, close_date
 
     for obj in objs:
+        session.add(obj)
         obj_amount = obj.full_amount - obj.invested_amount
         remained_amount = full_amount - invested_amount
 

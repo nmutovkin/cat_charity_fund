@@ -1,10 +1,7 @@
 from datetime import datetime
 from typing import Optional
 
-from pydantic import (BaseModel, Extra, Field, PositiveInt, root_validator,
-                      validator)
-
-from app.core import DATETIME_FORMAT
+from pydantic import BaseModel, Extra, Field, PositiveInt, root_validator
 
 
 class CharityProjectBase(BaseModel):
@@ -39,16 +36,6 @@ class CharityProjectDB(CharityProjectBase):
     fully_invested: bool
     create_date: datetime
     close_date: Optional[datetime]
-
-    @validator("create_date")
-    def create_date_validate(cls, value: datetime):
-        return value.strftime(DATETIME_FORMAT)
-
-    @validator("close_date")
-    def close_date_validate(cls, value: Optional[datetime]):
-        if value is None:
-            return None
-        return value.strftime(DATETIME_FORMAT)
 
     class Config:
         orm_mode = True

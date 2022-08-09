@@ -40,7 +40,7 @@ async def create_donation(
 
 @router.get(
     '/',
-    response_model=DonationDB,
+    response_model=List[DonationDB],
     response_model_exclude_none=True,
     dependencies=[Depends(current_superuser)]
 )
