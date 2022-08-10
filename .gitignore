@@ -44,6 +44,9 @@ pip-delete-this-directory.txt
 fastapi.db
 test.db
 
+# logs
+log.txt
+
 # Unit test / coverage reports
 htmlcov/
 .tox/

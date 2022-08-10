@@ -51,7 +51,9 @@ class UserManager(IntegerIDMixin, BaseUserManager[User, int]):
     async def on_after_register(
             self, user: User, request: Optional[Request] = None
     ):
-        print(f'Пользователь {user.email} зарегистрирован.')
+        log_file_path = settings.log_file_path
+        with open(log_file_path, 'w') as fd:
+            fd.write(f'Пользователь {user.email} зарегистрирован.')
 
 
 async def get_user_manager(user_db=Depends(get_user_db)):
