@@ -13,13 +13,15 @@
 5. Создайте файл для переменных окружения touch .env
 6. Задаем переменные окружения в .env (замените указанные значения на свои)
 
-  APP_TITLE=кошачий благотворительный фонд # название приложения
-  DESCRIPTION=описание # описание приложения
-  DATABASE_URI=dialect+driver://username:password@host:port/database # расположение файла базы данных
-  SECRET=secret_key # секретный ключ приложения
-  FIRST_SUPERUSER_EMAIL=admin@mail.ru # почтовый адрес первого суперюзера
-  FIRST_SUPERUSER_PASSWORD=password # пароль для уч. записи первого суперюзера
-  LOG_FILE_PATH=/home/user/log.txt # путь до файла с логами приложения
+```
+APP_TITLE=кошачий благотворительный фонд # название приложения
+DESCRIPTION=описание # описание приложения
+DATABASE_URI=dialect+driver://username:password@host:port/database # расположение файла базы данных
+SECRET=secret_key # секретный ключ приложения
+FIRST_SUPERUSER_EMAIL=admin@mail.ru # почтовый адрес первого суперюзера
+FIRST_SUPERUSER_PASSWORD=password # пароль для уч. записи первого суперюзера
+LOG_FILE_PATH=/home/user/log.txt # путь до файла с логами приложения
+```
 
 7. Иницируем бд alembic init --template async alembic
 8. Выполняем миграции alembic upgrade head
