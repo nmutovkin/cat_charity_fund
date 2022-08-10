@@ -6,10 +6,10 @@
 
 ## Запуск проекта
 
-1. Клонируйте репозиторий git clone https://github.com/nmutovkin/cat_charity_fund.git
+1. Клонируйте репозиторий ```git clone https://github.com/nmutovkin/cat_charity_fund.git```
 2. В папке с репозиторием (cd cat_charity_fund) создайте виртуальное окружение python -m venv venv
-3. Активируйте окружение source venv/bin/activate
-4. Установите зависимости pip install -r requirements.txt
+3. Активируйте окружение ```source venv/bin/activate```
+4. Установите зависимости ```pip install -r requirements.txt```
 5. Создайте файл для переменных окружения touch .env
 6. Задаем переменные окружения в .env (замените указанные значения на свои)
 
